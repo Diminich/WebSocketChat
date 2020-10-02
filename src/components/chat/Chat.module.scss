@@ -1,0 +1,57 @@
+$chatHeight: 100vh;
+$chatWidth: 100%;
+
+.wrapperChat {
+  height: $chatHeight;
+  width: $chatWidth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .windowMessages {
+    height: 80%;
+    width: 60%;
+    border: 2px solid grey;
+    overflow-y: scroll;
+
+    .renderingCustomMessages {
+      border-bottom: 1px solid grey;
+    }
+  }
+
+  .wrapperTextareaButtons {
+    height: 10%;
+    width: 60%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+
+    .wrapperTextarea {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+
+      .textareaMessage {
+        width: 100%;
+        height: 70%;
+        resize: none;
+      }
+
+    }
+
+    .exitButton {
+      height: 30px;
+      width: 50px;
+      background-color: white;
+      border: 2px solid grey;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+}

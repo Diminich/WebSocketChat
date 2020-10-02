@@ -3,12 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {Provider} from "react-redux";
+import store from "./reducers/redux-store";
+import {HashRouter} from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <HashRouter>
+        <Provider store={store}>
+            <React.StrictMode>
+                <App/>
+            </React.StrictMode>
+        </Provider>
+    </HashRouter>,
+    document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

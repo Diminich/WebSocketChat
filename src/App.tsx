@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import styles from './App.module.scss';
+import NameInput from "./components/nameInput/NameInput";
+import Chat from './components/chat/Chat';
+import { Switch, Route } from 'react-router-dom';
+import {createConnection, destroyConnection} from "./reducers/chat-reducer";
+import {useDispatch} from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(createConnection())
+        return () => {
+            dispatch(destroyConnection())
+        }
+    }, [])
+
+    return (
+        <div className={styles.wrapperApp}>
+            <Switch>
+                <Route exact path = '/' render={ () => <NameInput />}/>
+                <Route exact path='/Chat' render={() => <Chat />} />
+                <Route render={() => <div className={styles.notFound}>404 NOT FOUND</div>} />
+            </Switch>
+        </div>
+    );
 }
 
 export default App;

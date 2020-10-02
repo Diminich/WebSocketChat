@@ -1,0 +1,41 @@
+.nameInputButton {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inputNameError {
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .normalInputName {
+      border-radius: 5px;
+    }
+
+    .errorInputName {
+      @extend .normalInputName;
+      border-color: red;
+    }
+
+    .errorOutput {
+      color: red;
+    }
+  }
+
+  .button {
+    height: 25px;
+    width: 100px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: white;
+    outline: none;
+  }
+
+  .button:disabled:hover {
+    background-color: white;
+  }
+}
+
