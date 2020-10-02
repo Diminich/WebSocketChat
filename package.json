@@ -1,7 +1,7 @@
 {
   "name": "chatwebsocet",
   "version": "0.1.0",
-  "homepage":"https://Diminich.github.io/repository-name",
+  "homepage": "https://Diminich.github.io/WebSocketChat",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -16,6 +16,7 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/redux-thunk": "^2.1.0",
     "@types/socket.io-client": "^1.4.33",
+    "gh-pages": "^3.1.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
