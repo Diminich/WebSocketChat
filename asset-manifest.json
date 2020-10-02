@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/WebSocketChat/static/css/main.37a91597.chunk.css",
+    "main.js": "/WebSocketChat/static/js/main.7c5f37d4.chunk.js",
+    "main.js.map": "/WebSocketChat/static/js/main.7c5f37d4.chunk.js.map",
+    "runtime-main.js": "/WebSocketChat/static/js/runtime-main.7aeb4b5e.js",
+    "runtime-main.js.map": "/WebSocketChat/static/js/runtime-main.7aeb4b5e.js.map",
+    "static/js/2.48503413.chunk.js": "/WebSocketChat/static/js/2.48503413.chunk.js",
+    "static/js/2.48503413.chunk.js.map": "/WebSocketChat/static/js/2.48503413.chunk.js.map",
+    "index.html": "/WebSocketChat/index.html",
+    "precache-manifest.997ddd4d169399cc51fcd9386b75da04.js": "/WebSocketChat/precache-manifest.997ddd4d169399cc51fcd9386b75da04.js",
+    "service-worker.js": "/WebSocketChat/service-worker.js",
+    "static/css/main.37a91597.chunk.css.map": "/WebSocketChat/static/css/main.37a91597.chunk.css.map",
+    "static/js/2.48503413.chunk.js.LICENSE.txt": "/WebSocketChat/static/js/2.48503413.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7aeb4b5e.js",
+    "static/js/2.48503413.chunk.js",
+    "static/css/main.37a91597.chunk.css",
+    "static/js/main.7c5f37d4.chunk.js"
+  ]
+}
