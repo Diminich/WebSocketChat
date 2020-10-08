@@ -25,9 +25,9 @@ const Chat = React.memo(() => {
 
     const onKeyEnterPress = (e: React.KeyboardEvent) => {
         if (e.key === 'Enter') {
-            if (message !== '') {
-                debugger
+            if (message.trim() !== '') {
                 dispatch(sendMessage(message))
+                e.preventDefault()
                 setMessage('')
             }
         }
@@ -63,7 +63,6 @@ const Chat = React.memo(() => {
                 <div ref={messagesAnchorRef}/>
             </div>
             <div className={styles.wrapperTextareaButtons}>
-                <div className={styles.wrapperTextarea}>
                      <textarea value={message}
                                className={styles.textareaMessage}
                                placeholder='Введите сообщение'
@@ -74,7 +73,12 @@ const Chat = React.memo(() => {
                                onChange={(e) => {
                                    setMessage(e.currentTarget.value)
                                }}/>
-                </div>
+                <button className={styles.setMessageButton} disabled={message.length < 1} onClick={() => {
+                    dispatch(sendMessage(message))
+                    setMessage('')
+                }}>
+                    Set message
+                </button>
                 <NavLink className={styles.exitButton} to={'/'}>
                     Exit
                 </NavLink>
